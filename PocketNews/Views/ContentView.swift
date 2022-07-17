@@ -14,23 +14,26 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(networkManager.posts) { post in
-                VStack {
-                    HStack {
-                        Text(post.title)
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                        Spacer()
+                NavigationLink(destination: DetailView(url: post.url)) {
+                    VStack {
+                        HStack {
+                            Text(post.title)
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                            Spacer()
+                        }
+                        .lineLimit(3)
+                        HStack {
+                            Text(String(post.points))
+                                .fontWeight(.light)
+                            Text(post.author)
+                                .fontWeight(.light)
+                            Spacer()
+                        }
+                        
                     }
-                    .lineLimit(3)
-                    HStack {
-                        Text(String(post.points))
-                            .fontWeight(.light)
-                        Text(post.author)
-                            .fontWeight(.light)
-                        Spacer()
-                    }
-                    
                 }
+                
             }
             .navigationTitle("Pocket News")
         }
