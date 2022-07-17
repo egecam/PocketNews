@@ -14,6 +14,7 @@
 		CD193A272882E1C300C073FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A262882E1C300C073FD /* NetworkManager.swift */; };
 		CD193A292882E3AA00C073FD /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A282882E3AA00C073FD /* PostData.swift */; };
 		CD193A2C28842AF300C073FD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A2B28842AF300C073FD /* DetailView.swift */; };
+		CD193A2E288430F300C073FD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A2D288430F300C073FD /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CD193A262882E1C300C073FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CD193A282882E3AA00C073FD /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		CD193A2B28842AF300C073FD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		CD193A2D288430F300C073FD /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,9 @@
 		CD193A162882DBE600C073FD /* PocketNews */ = {
 			isa = PBXGroup;
 			children = (
+				CD193A2A28842AE100C073FD /* Views */,
 				CD193A252882E1B200C073FD /* Models */,
 				CD193A172882DBE600C073FD /* PocketNewsApp.swift */,
-				CD193A2A28842AE100C073FD /* Views */,
 				CD193A1B2882DBE700C073FD /* Assets.xcassets */,
 				CD193A1D2882DBE700C073FD /* Preview Content */,
 			);
@@ -88,6 +90,7 @@
 			children = (
 				CD193A192882DBE600C073FD /* ContentView.swift */,
 				CD193A2B28842AF300C073FD /* DetailView.swift */,
+				CD193A2D288430F300C073FD /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				CD193A272882E1C300C073FD /* NetworkManager.swift in Sources */,
 				CD193A292882E3AA00C073FD /* PostData.swift in Sources */,
 				CD193A1A2882DBE600C073FD /* ContentView.swift in Sources */,
+				CD193A2E288430F300C073FD /* WebView.swift in Sources */,
 				CD193A2C28842AF300C073FD /* DetailView.swift in Sources */,
 				CD193A182882DBE600C073FD /* PocketNewsApp.swift in Sources */,
 			);
