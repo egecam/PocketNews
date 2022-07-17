@@ -19,6 +19,5 @@ struct Post: Decodable, Identifiable {
     let points: Int
     let title: String
     let url: String?
-    let created_at: String
     let author: String
 }
