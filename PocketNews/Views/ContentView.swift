@@ -30,16 +30,17 @@ struct ContentView: View {
                                 .fontWeight(.light)
                             Spacer()
                         }
-                        
                     }
-                }
+                    .navigationTitle("PocketNews")
                 
+                }
             }
-            .navigationTitle("Pocket News")
         }
         .onAppear {
             self.networkManager.fetchData()
+            
         }
+        
     }
 }
 
@@ -48,9 +49,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-//let posts = [
-//    Post(id: "1", title: "Hello"),
-//    Post(id: "2", title: "Bonjour"),
-//    Post(id: "3", title: "Merhaba")
-//]
