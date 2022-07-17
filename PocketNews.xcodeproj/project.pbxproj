@@ -15,6 +15,7 @@
 		CD193A292882E3AA00C073FD /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A282882E3AA00C073FD /* PostData.swift */; };
 		CD193A2C28842AF300C073FD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A2B28842AF300C073FD /* DetailView.swift */; };
 		CD193A2E288430F300C073FD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A2D288430F300C073FD /* WebView.swift */; };
+		CD193A30288442D200C073FD /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A2F288442D200C073FD /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CD193A282882E3AA00C073FD /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		CD193A2B28842AF300C073FD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CD193A2D288430F300C073FD /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		CD193A2F288442D200C073FD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				CD193A192882DBE600C073FD /* ContentView.swift */,
+				CD193A2F288442D200C073FD /* SplashScreenView.swift */,
 				CD193A2B28842AF300C073FD /* DetailView.swift */,
 				CD193A2D288430F300C073FD /* WebView.swift */,
 			);
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD193A30288442D200C073FD /* SplashScreenView.swift in Sources */,
 				CD193A272882E1C300C073FD /* NetworkManager.swift in Sources */,
 				CD193A292882E3AA00C073FD /* PostData.swift in Sources */,
 				CD193A1A2882DBE600C073FD /* ContentView.swift in Sources */,
