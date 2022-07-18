@@ -13,32 +13,58 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(networkManager.posts) { post in
-                NavigationLink(destination: DetailView(url: post.url)) {
-                    VStack {
-                        HStack {
-                            Text(post.title)
-                                .font(.subheadline)
-                                .fontWeight(.bold)
-                            Spacer()
+                List(networkManager.posts) { post in
+                    NavigationLink(destination: DetailView(url: post.url)) {
+                        VStack {
+                            HStack {
+                                Text(post.title)
+                                    .font(.subheadline)
+                                    .fontWeight(.bold)
+                                Spacer()
+                            }
+                            .lineLimit(3)
+                            HStack {
+                                Text(String(post.points))
+                                    .fontWeight(.light)
+                                Text(post.author)
+                                    .fontWeight(.light)
+                                Spacer()
+                            }
                         }
-                        .lineLimit(3)
-                        HStack {
-                            Text(String(post.points))
-                                .fontWeight(.light)
-                            Text(post.author)
-                                .fontWeight(.light)
-                            Spacer()
+                        .navigationTitle("PocketNews")
+                        
+                    }
+                    
+                }
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                        Button("Top Stories") {
+                            print("one")
+                        }
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .clipShape(Capsule())
+                        
+                        Button("Ask HN") {
+                            print("two")
+                        }
+                        
+                        Button("Show HN") {
+                            print("two")
+                        }
+                        
+                        Button("Last 24h") {
+                            print("two")
                         }
                     }
-                    .navigationTitle("PocketNews")
-                
                 }
+                .refreshable {
+                    self.networkManager.fetchData()
             }
+            
         }
         .onAppear {
             self.networkManager.fetchData()
-            
         }
         
     }
