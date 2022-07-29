@@ -17,9 +17,9 @@ struct ContentView: View {
     struct FilterButton: ButtonStyle {
         func makeBody(configuration: Configuration) -> some View {
             configuration.label
-                .foregroundColor(.white)
+                .foregroundColor(Color("ButtonForegroundColor"))
                 .background(RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("ButtonBackgroundColor"))
                     .frame(width: 100, height: 30))
                 .padding(.leading, 20)
         }
@@ -27,9 +27,9 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            
             VStack {
                 //MARK: - Filter buttons
+                Spacer()
                 HStack {
                     Button("Top Stories") {
                         changeFilter(to: "front_page")
@@ -52,7 +52,6 @@ struct ContentView: View {
                     
                     Spacer()
                 }
-                
                 //MARK: - List
                 List(networkManager.posts) { post in
                     NavigationLink(destination: DetailView(url: post.url)) {
@@ -79,6 +78,7 @@ struct ContentView: View {
                     //TODO: Add GhostLoader animation
                     self.networkManager.fetchData(tags: tag)
                 }
+                Spacer()
             }
         }
         .onAppear {
