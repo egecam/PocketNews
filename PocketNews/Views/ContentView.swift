@@ -82,6 +82,14 @@ struct ContentView: View {
         }
         
     }
+    
+    func changeFilter(to: String) {
+        self.tag = to
+        self.networkManager.fetchData(tags: tag)
+        //TODO: Move function to an external model
+    }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
