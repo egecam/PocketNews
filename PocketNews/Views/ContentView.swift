@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @ObservedObject var networkManager = NetworkManager()
     
+    @State var tag = "front_page"
     var body: some View {
         NavigationView {
                 List(networkManager.posts) { post in
