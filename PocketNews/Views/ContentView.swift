@@ -12,6 +12,19 @@ struct ContentView: View {
     @ObservedObject var networkManager = NetworkManager()
     
     @State var tag = "front_page"
+    
+    //MARK: - FilterButton style
+    struct FilterButton: ButtonStyle {
+        func makeBody(configuration: Configuration) -> some View {
+            configuration.label
+                .foregroundColor(.white)
+                .background(RoundedRectangle(cornerRadius: 12)
+                    .foregroundColor(.black)
+                    .frame(width: 100, height: 30))
+                .padding(.leading, 20)
+        }
+    }
+    
     var body: some View {
         NavigationView {
                 List(networkManager.posts) { post in
