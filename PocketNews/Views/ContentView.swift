@@ -80,7 +80,6 @@ struct ContentView: View {
                     self.networkManager.fetchData(tags: tag)
                 }
             }
-            
         }
         .onAppear {
             self.networkManager.fetchData(tags: tag)
