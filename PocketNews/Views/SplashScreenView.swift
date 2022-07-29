@@ -18,7 +18,9 @@ struct SplashScreenView: View {
         if isActive {
             ContentView()
         } else {
-            VStack {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [Color(royalblue!), .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
                 VStack {
                     Image("pocketnews")
                         .font(.system(size: 50))
