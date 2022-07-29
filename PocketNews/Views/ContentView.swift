@@ -73,14 +73,17 @@ struct ContentView: View {
                             }
                         }
                     }
+                    .navigationTitle("PocketNews")
                 }
                 .refreshable {
-                    self.networkManager.fetchData()
+                    //TODO: Add GhostLoader animation
+                    self.networkManager.fetchData(tags: tag)
+                }
             }
             
         }
         .onAppear {
-            self.networkManager.fetchData()
+            self.networkManager.fetchData(tags: tag)
         }
         
     }
