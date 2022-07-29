@@ -27,6 +27,33 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+            
+            VStack {
+                //MARK: - Filter buttons
+                HStack {
+                    Button("Top Stories") {
+                        changeFilter(to: "front_page")
+                    }
+                    .buttonStyle(FilterButton())
+                    
+                    Spacer()
+                    
+                    Button("Ask HN") {
+                        changeFilter(to: "ask_hn")
+                    }
+                    .buttonStyle(FilterButton())
+                    
+                    Spacer()
+                    
+                    Button("Show HN") {
+                        changeFilter(to: "show_hn")
+                    }
+                    .buttonStyle(FilterButton())
+                    
+                    Spacer()
+                }
+                
+                //MARK: - List
                 List(networkManager.posts) { post in
                     NavigationLink(destination: DetailView(url: post.url)) {
                         VStack {
@@ -44,31 +71,6 @@ struct ContentView: View {
                                     .fontWeight(.light)
                                 Spacer()
                             }
-                        }
-                        .navigationTitle("PocketNews")
-                        
-                    }
-                    
-                }
-                .toolbar {
-                    ToolbarItemGroup(placement: .navigationBarLeading) {
-                        Button("Top Stories") {
-                            print("one")
-                        }
-                        .background(.blue)
-                        .foregroundColor(.white)
-                        .clipShape(Capsule())
-                        
-                        Button("Ask HN") {
-                            print("two")
-                        }
-                        
-                        Button("Show HN") {
-                            print("two")
-                        }
-                        
-                        Button("Last 24h") {
-                            print("two")
                         }
                     }
                 }
