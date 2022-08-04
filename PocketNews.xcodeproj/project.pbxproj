@@ -16,6 +16,7 @@
 		CD193A2C28842AF300C073FD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A2B28842AF300C073FD /* DetailView.swift */; };
 		CD193A2E288430F300C073FD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A2D288430F300C073FD /* WebView.swift */; };
 		CD193A30288442D200C073FD /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD193A2F288442D200C073FD /* SplashScreenView.swift */; };
+		CD6ED80D289453BE00AE51C1 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ED80C289453BE00AE51C1 /* StoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		CD193A2B28842AF300C073FD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CD193A2D288430F300C073FD /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		CD193A2F288442D200C073FD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		CD6ED80C289453BE00AE51C1 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		CDB6C91A28969FC00055FEAD /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				CD193A2F288442D200C073FD /* SplashScreenView.swift */,
 				CD193A2B28842AF300C073FD /* DetailView.swift */,
 				CD193A2D288430F300C073FD /* WebView.swift */,
+				CD6ED80C289453BE00AE51C1 /* StoryView.swift */,
+				CDB6C91A28969FC00055FEAD /* Empty.md */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				CD193A1A2882DBE600C073FD /* ContentView.swift in Sources */,
 				CD193A2E288430F300C073FD /* WebView.swift in Sources */,
 				CD193A2C28842AF300C073FD /* DetailView.swift in Sources */,
+				CD6ED80D289453BE00AE51C1 /* StoryView.swift in Sources */,
 				CD193A182882DBE600C073FD /* PocketNewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
