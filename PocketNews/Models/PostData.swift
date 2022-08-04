@@ -20,4 +20,5 @@ struct Post: Decodable, Identifiable {
     let title: String
     let url: String?
     let author: String
+    let story_text: String?
 }
