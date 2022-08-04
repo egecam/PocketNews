@@ -12,6 +12,7 @@ struct ContentView: View {
     @ObservedObject var networkManager = NetworkManager()
     
     @State var tag = "front_page"
+    @State var tagSelection = ["Top Stories", "Ask HN", "Show HN"]
     
     //MARK: - FilterButton style
     struct FilterButton: ButtonStyle {
@@ -27,32 +28,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+            //MARK: - List
             VStack {
-                //MARK: - Filter buttons
-                Spacer()
-                HStack {
-                    Button("Top Stories") {
-                        changeFilter(to: "front_page")
-                    }
-                    .buttonStyle(FilterButton())
-                    
-                    Spacer()
-                    
-                    Button("Ask HN") {
-                        changeFilter(to: "ask_hn")
-                    }
-                    .buttonStyle(FilterButton())
-                    
-                    Spacer()
-                    
-                    Button("Show HN") {
-                        changeFilter(to: "show_hn")
-                    }
-                    .buttonStyle(FilterButton())
-                    
-                    Spacer()
-                }
-                //MARK: - List
                 List(networkManager.posts) { post in
                     NavigationLink(destination: DetailView(url: post.url)) {
                         VStack {
@@ -72,15 +49,28 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .navigationTitle("PocketNews")
                 }
+                .toolbar {
+                    Picker(
+                        selection: $tagSelection,
+                        label: Text("Picker")) {
+                            ForEach(tagSelection { selection in
+                                Text(selection)
+                                    .tag(selection)
+                            })
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                }
+                .navigationTitle("PocketNews")
                 .refreshable {
                     //TODO: Add GhostLoader animation
                     self.networkManager.fetchData(tags: tag)
                 }
-                Spacer()
             }
+            
         }
+        
+        
         .onAppear {
             self.networkManager.fetchData(tags: tag)
         }
